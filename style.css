@@ -124,7 +124,7 @@ body.dark .skill-card { background: #1e293b; color: #f1f5f9; }
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  text-decoration: none;
+  text-align:center ;
   color: inherit;
   transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -133,6 +133,23 @@ body.dark .skill-card { background: #1e293b; color: #f1f5f9; }
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 body.dark .project-card { background: #1e293b; }
+.project-links {
+  margin: 10px;
+  font-size: 0.85rem;
+}
+
+.project-links a {
+  color: #2563eb;         /* Always nice blue */
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 8px;
+  transition: color 0.2s;
+}
+
+.project-links a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;         /* Darker blue on hover */
+}
 
 /* Contact */
 .contact-container { display: flex; flex-wrap: wrap; gap: 20px; }
@@ -163,30 +180,3 @@ body.dark .footer-links a { color: #cbd5e1; }
   .about-container { flex-direction: column; text-align: center; }
   .hero .name { font-size: 2rem; }
 }
-.project-links {
-  margin: 10px;
-  font-size: 0.85rem;
-}
-.project-links a {
-  color: #0f172a;
-  text-decoration: none;
-  font-weight: bold;
-  margin-right: 8px;
-}
-.project-links a:hover {
-  text-decoration: underline;
-  color: #2563eb; /* nice blue on hover */
-}
-.project-links a {
-  color: #2563eb;   /* Always nice blue */
-  text-decoration: none;
-  font-weight: bold;
-  margin-right: 8px;
-  transition: color 0.2s;
-}
-.project-links a:hover {
-  text-decoration: underline;
-  color: #1d4ed8;   /* Darker blue on hover */
-}
-
-
