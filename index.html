@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Md. Maksudul Haque | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
 </head>
@@ -15,14 +19,20 @@
       <nav>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
       <div class="nav-right">
-        <a href="mailto:maksudrakib44@example.com" class="say-hello">Say Hello</a>
+        <a href="mailto:maksudrakib44@gmail.com" class="say-hello">Say Hello</a>
         <button id="theme-toggle" class="theme-toggle">🌙</button>
+      </div>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </div>
   </header>
@@ -32,11 +42,15 @@
     <div class="container hero-container">
       <p class="intro">Hello, I'm</p>
       <h2 class="name">Md. Maksudul Haque</h2>
-      <p class="tagline">Undergraduate CSE Student • Frontend Web Development • Software Development • Project Management • IT Support </p>
+      <p class="tagline">Undergraduate CSE Student • Frontend Web Development • Software Development • Project Management • IT Support</p>
       <div class="hero-buttons">
         <a href="#projects" class="btn">View Projects</a>
         <a href="https://www.linkedin.com/in/md-maksudul-haque-025bb0284/" target="_blank" class="btn outline">LinkedIn</a>
         <a href="https://github.com/maksudrakib44" target="_blank" class="btn outline">GitHub</a>
+      </div>
+      <div class="scroll-indicator">
+        <span></span>
+        <i class="fas fa-chevron-down"></i>
       </div>
     </div>
   </section>
@@ -45,23 +59,47 @@
   <section id="about" class="section reveal">
     <div class="container about-container">
       <div class="about-text">
-        <h2>About</h2>
-
+        <h2 class="section-title">About Me</h2>
         <p>Final-year Computer Science and Engineering student with a practical understanding of programming, web technologies, and software development. 
           Skilled in building responsive web applications using HTML, CSS, and JavaScript; with knowledge of creating and automating test frameworks, 
           and familiarity with applying Agile/Scrum practices using tools such as Jira and Trello. Eager to contribute as a quick learner and collaborative team member, 
           with strong problem-solving abilities and an interest in opportunities across Frontend Development, Software QA/Testing, and Project Management.
-
         </p>
-        
-        <ul>
-          <li>B.Sc. in CSE — Green University of Bangladesh (2022 - Present)</li>
-          <li>HSC (2020) — Hazaribagh Govt. College</li>
-          <li>SSC (2018) — Kishoreganj Ideal High School</li>
-        </ul>
       </div>
       <div class="about-photo">
-        <img src="maksud_photoformal.jpg" alt="Profile photo of Md. Maksudul Haque">
+        <div class="photo-frame">
+          <img src="assets/maksud_photoformal.jpg" alt="Profile photo of Md. Maksudul Haque">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="section reveal">
+    <div class="container">
+      <h2 class="section-title">Education</h2>
+      <div class="education-timeline">
+        <div class="education-item">
+          <div class="edu-year">2022 - Present</div>
+          <div class="edu-content">
+            <h3>B.Sc. in Computer Science & Engineering</h3>
+            <p>Green University of Bangladesh</p>
+          </div>
+        </div>
+        <div class="education-item">
+          <div class="edu-year">2020</div>
+          <div class="edu-content">
+            <h3>Higher Secondary Certificate (HSC)</h3>
+            <p>Hazaribagh Govt. College, Dhaka</p>
+          </div>
+        </div>
+        <div class="education-item">
+          <div class="edu-year">2018</div>
+          <div class="edu-content">
+            <h3>Secondary School Certificate (SSC)</h3>
+            <p>Kishoreganj Ideal High School</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -69,115 +107,323 @@
   <!-- Skills -->
   <section id="skills" class="section reveal">
     <div class="container">
-      <h2>Skills & Strengths</h2>
+      <h2 class="section-title">Skills & Strengths</h2>
       <div class="skills-grid">
-        <div class="skill-card"><h3>Programming</h3><p>Python · Java · C · SQL · HTML · CSS · JavaScript · PHP · Bash</p></div>
-        <div class="skill-card"><h3>Development Knowledge</h3><p>SDLC · Agile · Scrum · Kanban · Waterfall · Requirement Analysis · Manual Testing · Test Case Design · Test Automation (Selenium, PyTest, Postman)</p></div>
-        <div class="skill-card"><h3>Tools</h3><p>Git/GitHub · VS Code · Jupyter Notebook · Google Colab · Node.js · Chrome DevTools · TailwindCSS/Bootstrap · Jira · MS Office · Google Workspace</p></div>
-        <div class="skill-card"><h3>Professional Strengths</h3><p>Problem-Solving · Team Collaboration · Communication & Leadership · Time Management · Documentation & Reporting</p></div>
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3>Programming</h3>
+          <p>Python · Java · C · SQL · HTML · CSS · JavaScript · PHP · Bash</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i class="fas fa-cogs"></i>
+          </div>
+          <h3>Development Knowledge</h3>
+          <p>SDLC · Agile · Scrum · Kanban · Waterfall · Requirement Analysis · Manual Testing · Test Case Design · Test Automation (Selenium, PyTest, Postman)</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i class="fas fa-tools"></i>
+          </div>
+          <h3>Tools</h3>
+          <p>Git/GitHub · VS Code · Jupyter Notebook · Google Colab · Node.js · Chrome DevTools · TailwindCSS/Bootstrap · Jira · MS Office · Google Workspace</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3>Professional Strengths</h3>
+          <p>Problem-Solving · Team Collaboration · Communication & Leadership · Time Management · Documentation & Reporting</p>
+        </div>
       </div>
     </div>
   </section>
 
- <!-- Projects -->
-<section id="projects" class="section reveal">
-  <div class="container">
-    <h2>Projects</h2>
-    <div class="projects-grid">
-
-      <!-- Tour Expense Manager -->
-      <div class="project-card">
-        <h3>Tour Expense Manager</h3>
-        <p>Web based personal project using HTML5, CSS3, JavaScript.</p>
-        <div class="project-links">
-          <a href="https://github.com/maksudrakib44/Tour-Expense-Manager" target="_blank">GitHub Repo</a> |
-          <a href="https://maksudrakib44.github.io/Tour-Expense-Manager/" target="_blank">Live Demo</a>
+  <!-- Projects -->
+  <section id="projects" class="section reveal">
+    <div class="container">
+      <h2 class="section-title">Featured Projects</h2>
+      
+      <!-- Project Carousel -->
+      <div class="project-carousel">
+        <div class="carousel-container">
+          <div class="carousel-track">
+            <!-- Project 1 -->
+            <div class="carousel-slide active">
+              <div class="carousel-content">
+                <div class="carousel-image">
+                  <img src= "assets/Tour_Expense_Manager.png" alt="Tour Expense Manager">
+                </div>
+                <div class="carousel-text">
+                  <h3>Tour Expense Manager</h3>
+                  <p>Web-based personal project using HTML5, CSS3, JavaScript to help users track and manage tour expenses effectively.</p>
+                  <div class="tech-stack">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                  </div>
+                  <div class="project-links">
+                    <a href="https://github.com/maksudrakib44/Tour-Expense-Manager" target="_blank" class="btn">GitHub Repo</a>
+                    <a href="https://maksudrakib44.github.io/Tour-Expense-Manager/" target="_blank" class="btn outline">Live Demo</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Project 2 -->
+            <div class="carousel-slide">
+              <div class="carousel-content">
+                <div class="carousel-image">
+                  <img src="assets/MHShop_2.png" alt="MH Shop">
+                </div>
+                <div class="carousel-text">
+                  <h3>MH Shop</h3>
+                  <p>E-Commerce platform (Frontend) built with pure HTML, CSS, and JavaScript featuring product listings, cart functionality, and responsive design.</p>
+                  <div class="tech-stack">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                    <span>Responsive Design</span>
+                  </div>
+                  <div class="project-links">
+                    <a href="https://github.com/maksudrakib44/MH-e-commerce" target="_blank" class="btn">GitHub Repo</a>
+                    <a href="https://mh-e-commerce.vercel.app" target="_blank" class="btn outline">Live Demo</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Project 3 -->
+            <div class="carousel-slide">
+              <div class="carousel-content">
+                <div class="carousel-image">
+                  <img src="assets/TechDash.png" alt="Technology Adoption Dashboard">
+                </div>
+                <div class="carousel-text">
+                  <h3>Technology Adoption Dashboard</h3>
+                  <p>Interactive web application that visualizes the digital transformation journey from 1995 to 2024 using Chart.js for data visualization.</p>
+                  <div class="tech-stack">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                    <span>Chart.js</span>
+                  </div>
+                  <div class="project-links">
+                    <a href="https://github.com/maksudrakib44/Digital-Revolution-a-data-story" target="_blank" class="btn">GitHub Repo</a>
+                    <a href="https://maksudrakib44.github.io/Digital-Revolution-a-data-story/" target="_blank" class="btn outline">Live Demo</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="carousel-nav">
+            <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
+            <div class="carousel-dots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+            <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
+          </div>
         </div>
       </div>
+      
+      <!-- All Projects Grid -->
+      <h3 class="sub-section-title">All Projects</h3>
+      <div class="projects-grid">
+        <!-- Tour Expense Manager -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/Tour_Expense_Manager2.png" alt="Tour Expense Manager">
+          </div>
+          <div class="project-content">
+            <h3>Tour Expense Manager</h3>
+            <p>Web based personal project using HTML5, CSS3, JavaScript.</p>
+            <div class="project-tech">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/maksudrakib44/Tour-Expense-Manager" target="_blank">GitHub</a>
+              <a href="https://maksudrakib44.github.io/Tour-Expense-Manager/" target="_blank">Live Demo</a>
+            </div>
+          </div>
+        </div>
 
-          <!-- MH- E-Commerce -->
-      <div class="project-card">
-        <h3>MH Shop</h3>
-        <p>E-Commerce platform(Frontend) built with pure HTML, CSS, and JavaScript</p>
-        <div class="project-links">
-          <a href="https://github.com/maksudrakib44/MH-e-commerce" target="_blank">GitHub Repo</a> |
-          <a href="https://mh-e-commerce.vercel.app" target="_blank">Live Demo</a>
+        <!-- MH Shop -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/MHShop.png" alt="MH Shop">
+          </div>
+          <div class="project-content">
+            <h3>MH Shop</h3>
+            <p>E-Commerce platform (Frontend) built with pure HTML, CSS, and JavaScript.</p>
+            <div class="project-tech">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/maksudrakib44/MH-e-commerce" target="_blank">GitHub</a>
+              <a href="https://mh-e-commerce.vercel.app" target="_blank">Live Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Technology Adoption Dashboard -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/TechDash2.png" alt="Technology Adoption Dashboard">
+          </div>
+          <div class="project-content">
+            <h3>Technology Adoption Dashboard</h3>
+            <p>Interactive web application using HTML5, CSS3, JavaScript ES6+, Chart.js.</p>
+            <div class="project-tech">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JavaScript</span>
+              <span>Chart.js</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/maksudrakib44/Digital-Revolution-a-data-story" target="_blank">GitHub</a>
+              <a href="https://maksudrakib44.github.io/Digital-Revolution-a-data-story/" target="_blank">Live Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- FocusFlow -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/Focus_Flow.png" alt="FocusFlow">
+          </div>
+          <div class="project-content">
+            <h3>Interactive Pomodoro Timer & Focus Hub</h3>
+            <p>Pomodoro timer with task management, motivational quotes, and ambient sounds.</p>
+            <div class="project-tech">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/maksudrakib44/FocusFlow-Pomodoro-Timer-Productivity-Hub" target="_blank">GitHub</a>
+              <a href="https://maksudrakib44.github.io/FocusFlow-Pomodoro-Timer-Productivity-Hub/" target="_blank">Live Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chat App -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/chat_app.png" alt="Chat App">
+          </div>
+          <div class="project-content">
+            <h3>Chat App</h3>
+            <p>Java sockets + Swing UI for group/1:1 messaging.</p>
+            <div class="project-tech">
+              <span>Java</span>
+              <span>Swing</span>
+              <span>Socket Programming</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/maksudrakib44/Chat-App-in-java-and-socket-programming" target="_blank">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Campus Navigation -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/campus_navigation.png" alt="Campus Navigation System">
+          </div>
+          <div class="project-content">
+            <h3>Campus Navigation System</h3>
+            <p>Shortest pathfinding using BFS/DFS/Dijkstra.</p>
+            <div class="project-tech">
+              <span>Python</span>
+              <span>Algorithms</span>
+              <span>Graph Theory</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/maksudrakib44/Campus_Navigation_System" target="_blank">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blood Donation -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/Blood_management.png" alt="Blood Management System">
+          </div>
+          <div class="project-content">
+            <h3>Blood Management System</h3>
+            <p>Web-based system for managing blood donations and hospital requests.</p>
+            <div class="project-tech">
+              <span>PHP</span>
+              <span>MySQL</span>
+              <span>HTML/CSS/JS</span>
+              <span>Database Design</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/maksudrakib44/Blood-Management-System-master" target="_blank">GitHub</a>
+            </div>
+          </div>
         </div>
       </div>
-
-      <!-- Technology Adoption Dashboard -->
-      <div class="project-card">
-        <h3>Technology Adoption Dashboard</h3>
-        <p>The Technology Adoption Dashboard is an interactive web application using HTML5, CSS3, JavaScript ES6+, Chart.js that visualizes the digital transformation journey from 1995 to 2024.</p>
-        <div class="project-links">
-          <a href="https://github.com/maksudrakib44/Digital-Revolution-a-data-story" target="_blank">GitHub Repo</a> |
-          <a href="https://maksudrakib44.github.io/Digital-Revolution-a-data-story/" target="_blank">Live Demo</a>
-        </div>
-      </div>
-
-       <!-- FocusFlow -->
-      <div class="project-card">
-        <h3>Interactive Pomodoro Timer & Focus Hub</h3>
-        <p>Pomodoro timer with task management, motivational quotes, and ambient sounds using HTML, CSS, and JavaScript.</p>
-        <div class="project-links">
-          <a href="https://github.com/maksudrakib44/FocusFlow-Pomodoro-Timer-Productivity-Hub" target="_blank">GitHub Repo</a> |
-          <a href="https://maksudrakib44.github.io/FocusFlow-Pomodoro-Timer-Productivity-Hub/" target="_blank">Live Demo</a>
-        </div>
-      </div>
-
-      <!-- Chat App -->
-      <div class="project-card">
-        <h3>Chat App</h3>
-        <p>Java sockets + Swing UI for group/1:1 messaging.</p>
-        <div class="project-links">
-          <a href="https://github.com/maksudrakib44/Chat-App-in-java-and-socket-programming" target="_blank">GitHub Repo</a>
-        </div>
-      </div>
-
-      <!-- Campus Navigation -->
-      <div class="project-card">
-        <h3>Campus Navigation System</h3>
-        <p>Shortest pathfinding using BFS/DFS/Dijkstra.</p>
-        <div class="project-links">
-          <a href="https://github.com/maksudrakib44/Campus_Navigation_System" target="_blank">GitHub Repo</a>
-        </div>
-      </div>
-
-      <!-- Blood Donation -->
-      <div class="project-card">
-        <h3>Blood Management System</h3>
-        <p>Developed a web-based system for managing blood donations and hospital requests. Features included donor registration, hospital 
-  requests, inventory/stock management, and record handling. Followed SDLC methodologies: 
-  Requirement Analysis, System Design, Implementation, Testing, and Documentation. 
-  Technologies: PHP, MySQL, HTML, CSS, JavaScript, Database Design</p>
-        <div class="project-links">
-          <a href="https://github.com/maksudrakib44/Blood-Management-System-master" target="_blank">GitHub Repo</a>
-        </div>
-      </div>
-
     </div>
-  </div>
-</section>
-
+  </section>
 
   <!-- Contact -->
   <section id="contact" class="section reveal">
     <div class="container contact-container">
       <div class="contact-text">
-        <h2>Contact</h2>
-        <p>I am open to opportunities in web(frontend development) / software development / IT support, and eager to contribute and grow in a professional environment. I am responsive and approachable for communication.</p>
+        <h2 class="section-title">Get In Touch</h2>
+        <p>I am open to opportunities in web (frontend development) / software development / IT support, and eager to contribute and grow in a professional environment. I am responsive and approachable for communication.</p>
         <div class="contact-buttons">
-          <a href="mailto:maksudrakib44@gmail.com" class="btn">Email</a>
-          <a href="https://www.linkedin.com/in/md-maksudul-haque-025bb0284/" target="_blank" class="btn outline">LinkedIn</a>
-          <a href="https://github.com/maksudrakib44" target="_blank" class="btn outline">GitHub</a>
-          <a href="https://facebook.com/maksudulhaquerakib" target="_blank" class="btn outline">Facebook</a>
+          <a href="mailto:maksudrakib44@gmail.com" class="btn contact-btn">
+            <i class="fas fa-envelope"></i>
+            Email
+          </a>
+          <a href="https://www.linkedin.com/in/md-maksudul-haque-025bb0284/" target="_blank" class="btn outline contact-btn">
+            <i class="fab fa-linkedin"></i>
+            LinkedIn
+          </a>
+          <a href="https://github.com/maksudrakib44" target="_blank" class="btn outline contact-btn">
+            <i class="fab fa-github"></i>
+            GitHub
+          </a>
+          <a href="https://facebook.com/maksudulhaquerakib" target="_blank" class="btn outline contact-btn">
+            <i class="fab fa-facebook"></i>
+            Facebook
+          </a>
         </div>
       </div>
       <div class="contact-info">
         <h3>Quick Info</h3>
-        <p><strong>Location:</strong> Dhaka, Bangladesh</p>
-        <p><strong>Focus:</strong> Web Dev, Software Dev(QA), Project Manager, IT Support</p>
-        <p><strong>Availability:</strong> Job / Internship / Research </p>
+        <div class="info-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <strong>Location:</strong>
+            <p>Dhaka, Bangladesh</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-briefcase"></i>
+          <div>
+            <strong>Focus:</strong>
+            <p>Web Dev, Software Dev(QA), Project Manager, IT Support</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-user-clock"></i>
+          <div>
+            <strong>Availability:</strong>
+            <p>Job / Internship / Research</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -187,21 +433,17 @@
     <div class="container footer-container">
       <p>© 2025 Md. Maksudul Haque</p>
       <div class="footer-links">
-        <a href="https://github.com/maksudrakib44" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/md-maksudul-haque-025bb0284/" target="_blank">LinkedIn</a>
-        <a href="mailto:maksudrakib44@gmail.com">Email</a>
+        <a href="https://github.com/maksudrakib44" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/md-maksudul-haque-025bb0284/" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="mailto:maksudrakib44@gmail.com">
+          <i class="fas fa-envelope"></i>
+        </a>
       </div>
     </div>
   </footer>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
