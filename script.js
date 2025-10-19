@@ -7,6 +7,11 @@ function revealOnScroll() {
     const top = el.getBoundingClientRect().top;
     if (top < triggerBottom) {
       el.classList.add("active");
+      
+      // Animate proficiency bars when skills section is in view
+      if (el.id === 'skills') {
+        animateProficiencyBars();
+      }
     }
   });
 }
@@ -23,6 +28,32 @@ function throttle(func, limit) {
       setTimeout(() => inThrottle = false, limit);
     }
   }
+}
+
+// Animate proficiency bars
+function animateProficiencyBars() {
+  const proficiencyItems = document.querySelectorAll('.proficiency-item');
+  const proficiencyLevels = document.querySelectorAll('.proficiency-level');
+  
+  // Check if already animated
+  if (proficiencyItems[0].classList.contains('animate')) {
+    return;
+  }
+  
+  // Animate each proficiency item with stagger
+  proficiencyItems.forEach((item, index) => {
+    setTimeout(() => {
+      item.classList.add('animate');
+    }, index * 100);
+  });
+  
+  // Animate proficiency bars with delay
+  proficiencyLevels.forEach((bar, index) => {
+    const level = bar.getAttribute('data-level');
+    setTimeout(() => {
+      bar.style.width = level + '%';
+    }, 500 + (index * 150)); // Staggered animation
+  });
 }
 
 // Initialize scroll reveal on load and scroll
@@ -265,3 +296,43 @@ document.addEventListener('DOMContentLoaded', function() {
     document.body.classList.add('loaded');
   });
 });
+
+// Sticky header on scroll
+window.addEventListener('scroll', function() {
+  const navbar = document.querySelector('.navbar');
+  if (window.scrollY > 50) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
+
+// Particle animation for hero section
+function createParticles() {
+  const particlesContainer = document.getElementById('particles');
+  const particleCount = 50;
+  
+  for (let i = 0; i < particleCount; i++) {
+    const particle = document.createElement('div');
+    particle.classList.add('particle');
+    
+    // Random properties
+    const size = Math.random() * 5 + 2;
+    const posX = Math.random() * 100;
+    const posY = Math.random() * 100;
+    const delay = Math.random() * 15;
+    const duration = Math.random() * 10 + 10;
+    
+    particle.style.width = `${size}px`;
+    particle.style.height = `${size}px`;
+    particle.style.left = `${posX}%`;
+    particle.style.top = `${posY}%`;
+    particle.style.animationDelay = `${delay}s`;
+    particle.style.animationDuration = `${duration}s`;
+    
+    particlesContainer.appendChild(particle);
+  }
+}
+
+// Initialize particles
+document.addEventListener('DOMContentLoaded', createParticles);
