@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Md. Maksudul Haque | Portfolio</title>
+  <title>Md. Maksudul Haque | Machine Learning & Web Development Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
 </head>
@@ -15,19 +16,26 @@
   <!-- Navigation -->
   <header class="navbar">
     <div class="container nav-container">
-      <h1 class="logo">MH</h1>
+      <div class="logo-wrapper">
+        <h1 class="logo">MH<span class="logo-dot"></span></h1>
+      </div>
       <nav>
         <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </nav>
       <div class="nav-right">
-        <a href="mailto:maksudrakib44@gmail.com" class="say-hello">Say Hello</a>
-        <button id="theme-toggle" class="theme-toggle">🌙</button>
+        <a href="assets\CV_Maksud.pdf" class="btn-resume" target="_blank">
+          <i class="fas fa-download"></i>
+          <span>Resume</span>
+        </a>
+        <button id="theme-toggle" class="theme-toggle">
+          <i class="fas fa-moon"></i>
+        </button>
       </div>
       <div class="hamburger">
         <span></span>
@@ -37,154 +45,386 @@
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="particles-container" id="particles"></div>
+  <!-- Hero Section with Slideshow -->
+  <section id="home" class="hero">
+    <!-- Animated Background Elements -->
+    <div class="hero-bg-elements">
+      <div class="bg-shape shape-1"></div>
+      <div class="bg-shape shape-2"></div>
+      <div class="bg-shape shape-3"></div>
+      <div class="bg-shape shape-4"></div>
+    </div>
+    
+    <!-- Floating Particles -->
+    <div class="floating-particles">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
+    
     <div class="container hero-container">
-      <p class="intro">Hello, I'm</p>
-      <h2 class="name">Md. Maksudul Haque</h2>
-      <p class="tagline">Undergraduate CSE Student • Frontend Web Development • Machine Learning • Project Management</p>
-      <div class="hero-buttons">
-        <a href="#projects" class="btn">View Projects</a>
-        <a href="https://www.linkedin.com/in/md-maksudul-haque-025bb0284/" target="_blank" class="btn outline">LinkedIn</a>
-        <a href="https://github.com/maksudrakib44" target="_blank" class="btn outline">GitHub</a>
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-text">🚀 Available for Opportunities</span>
+        </div>
+        
+        <p class="intro">Hello, I'm</p>
+        
+        <div class="hero-name-wrapper">
+          <h1 class="name">
+            <span class="name-text">Md. Maksudul</span>
+            <span class="name-text accent">Haque</span>
+          </h1>
+          <div class="name-underline"></div>
+        </div>
+        
+        <div class="typewriter-container">
+          <p class="tagline typewriter">
+            <span class="typed-text"></span>
+            <span class="cursor">|</span>
+          </p>
+        </div>
+        
+        <p class="hero-description">
+          Passionate Computer Science student specializing in Machine Learning, Computer Vision, 
+          and Frontend Development. Building intelligent solutions through research.
+        </p>
+        
+        <div class="hero-stats">
+          <div class="stat">
+            <h3>10+</h3>
+            <p>Projects</p>
+          </div>
+          <div class="stat">
+            <h3>8+</h3>
+            <p>Technologies</p>
+          </div>
+        </div>
+        
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">
+            <i class="fas fa-rocket"></i>
+            <span>View Projects</span>
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <i class="fas fa-envelope"></i>
+            <span>Contact Me</span>
+          </a>
+        </div>
+        
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/md-maksudul-haque-025bb0284/" target="_blank" class="social-link">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/maksudrakib44" target="_blank" class="social-link">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="mailto:maksudrakib44@gmail.com" class="social-link">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="https://facebook.com/maksudulhaquerakib" target="_blank" class="social-link">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </div>
       </div>
-      <div class="scroll-indicator">
-        <span></span>
-        <i class="fas fa-chevron-down"></i>
+      
+      <div class="hero-image">
+        <div class="image-container">
+          <div class="image-wrapper">
+            <img src="assets/avater_photo.png" alt="Md. Maksudul Haque">
+            <div class="image-frame"></div>
+            <div class="image-dots">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="floating-card card-1">
+            <i class="fas fa-code"></i>
+            <span>Frontend Web</span>
+          </div>
+          <div class="floating-card card-2">
+            <i class="fas fa-brain"></i>
+            <span>AI/ML</span>
+          </div>
+          <div class="floating-card card-3">
+            <i class="fas fa-chart-line"></i>
+            <span>Projects</span>
+          </div>
+        </div>
       </div>
+    </div>
+    
+    <div class="scroll-indicator">
+      <div class="mouse">
+        <div class="wheel"></div>
+      </div>
+      <p>Scroll Down</p>
+      <i class="fas fa-chevron-down"></i>
     </div>
   </section>
 
-  <!-- About -->
+  <!-- About Section -->
   <section id="about" class="section reveal">
-    <div class="container about-container">
-      <div class="about-text">
+    <div class="container">
+      <div class="section-header">
         <h2 class="section-title">About Me</h2>
-        <p>Final-year Computer Science and Engineering student specializing in Machine Learning and Computer Vision. Experienced in developing deep learning models for image analysis. Skilled in frontend web development and knowledgeable in project management methodologies, overseeing end-to-end project lifecycles.</p>
+        <p class="section-subtitle">Get to know me better</p>
+        <div class="section-line"></div>
       </div>
-      <div class="about-photo">
-        <div class="photo-frame">
-          <img src="assets/maksud_photos.jpg" alt="Profile photo of Md. Maksudul Haque">
+      
+      <div class="about-content">
+        <div class="about-image">
+          <div class="image-wrapper">
+            <img src="assets/maksud_photos.jpg" alt="Md. Maksudul Haque">
+            <div class="image-glow"></div>
+          </div>
+          <div class="about-badge">
+            <i class="fas fa-award"></i>
+            <span>Final Year Student</span>
+          </div>
+        </div>
+        
+        <div class="about-text">
+          <h3>Passionate Developer & ML Enthusiast</h3>
+          <p>
+            I'm a final-year Computer Science and Engineering student with a strong focus on 
+            <span class="highlight">Machine Learning</span> and <span class="highlight">Computer Vision</span>. 
+            I specialize in developing deep learning models for image analysis and object detection. Proficient in data preprocessing, model training, and full ML pipelines, enhanced
+            by frontend web development skills for building responsive applications. Passionate about scalable,
+            research-driven solutions.
+          </p>
+          
+          <div class="about-info">
+            <div class="info-item">
+              <i class="fas fa-user-graduate"></i>
+              <div>
+                <h4>Education</h4>
+                <p>B.Sc. in CSE (Final Year)</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h4>Location</h4>
+                <p>Dhaka, Bangladesh</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-briefcase"></i>
+              <div>
+                <h4>Focus Areas</h4>
+                <p>ML, Computer Vision, Web Dev</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-clock"></i>
+              <div>
+                <h4>Availability</h4>
+                <p>Open to Opportunities</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="about-cta">
+            <a href="#contact" class="btn btn-primary">
+              <i class="fas fa-paper-plane"></i>
+              <span>Let's Connect</span>
+            </a>
+            <a href="https://github.com/maksudrakib44" target="_blank" class="btn btn-outline">
+              <i class="fab fa-github"></i>
+              <span>View GitHub</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Education -->
+  <!-- Education Section -->
   <section id="education" class="section reveal">
     <div class="container">
-      <h2 class="section-title">Education</h2>
-      <div class="education-timeline">
-        <div class="education-item">
-          <div class="edu-year">2022 - Present</div>
-          <div class="edu-content">
+      <div class="section-header">
+        <h2 class="section-title">Education</h2>
+        <p class="section-subtitle">My Academic Journey</p>
+        <div class="section-line"></div>
+      </div>
+      
+      <div class="timeline">
+        <div class="timeline-line"></div>
+        
+        <div class="timeline-item">
+          <div class="timeline-dot">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-date">2022 - Present</div>
             <h3>B.Sc. in Computer Science & Engineering</h3>
-            <p>Green University of Bangladesh</p>
+            <p class="institution">Green University of Bangladesh</p>
+            <p class="description">Currently in final year with focus on deep learning applications and research.</p>
+            <div class="timeline-tags">
+            </div>
           </div>
         </div>
-        <div class="education-item">
-          <div class="edu-year">2020</div>
-          <div class="edu-content">
+        
+        <div class="timeline-item">
+          <div class="timeline-dot">
+            <i class="fas fa-school"></i>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-date">2020</div>
             <h3>Higher Secondary Certificate (HSC)</h3>
-            <p>Hazaribagh Govt. College, Dhaka</p>
+            <p class="institution">Hazaribagh Government College, Dhaka</p>
+            <p class="description">Completed with distinction in Science stream.</p>
+            <div class="timeline-tags">
+            </div>
           </div>
         </div>
-        <div class="education-item">
-          <div class="edu-year">2018</div>
-          <div class="edu-content">
+        
+        <div class="timeline-item">
+          <div class="timeline-dot">
+            <i class="fas fa-book-open"></i>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-date">2018</div>
             <h3>Secondary School Certificate (SSC)</h3>
-            <p>Kishoreganj Ideal High School</p>
+            <p class="institution">Kishoreganj Ideal High School</p>
+            <p class="description">Completed with excellent academic performance in Science background.</p>
+            <div class="timeline-tags">
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Skills -->
+  <!-- Skills Section -->
   <section id="skills" class="section reveal">
     <div class="container">
-      <h2 class="section-title">Skills & Expertise</h2>
+      <div class="section-header">
+        <h2 class="section-title">Skills & Expertise</h2>
+        <p class="section-subtitle">My Technical Proficiency</p>
+        <div class="section-line"></div>
+      </div>
       
       <!-- Programming Languages with Proficiency -->
       <div class="skills-proficiency">
-        <h3 class="sub-section-title">Programming Languages Proficiency</h3>
+        <h3 class="sub-section-title">Programming Languages</h3>
         <div class="proficiency-grid">
           <div class="proficiency-item">
             <div class="language-info">
-              <span class="language-name">Python</span>
+              <div class="language-name">
+                <i class="fab fa-python"></i>
+                <span>Python</span>
+              </div>
               <span class="language-percent">80%</span>
             </div>
             <div class="proficiency-bar">
               <div class="proficiency-level" data-level="80"></div>
             </div>
           </div>
+          
           <div class="proficiency-item">
             <div class="language-info">
-              <span class="language-name">Java</span>
+              <div class="language-name">
+                <i class="fab fa-java"></i>
+                <span>Java</span>
+              </div>
               <span class="language-percent">70%</span>
             </div>
             <div class="proficiency-bar">
               <div class="proficiency-level" data-level="70"></div>
             </div>
           </div>
+          
           <div class="proficiency-item">
             <div class="language-info">
-              <span class="language-name">C</span>
+              <div class="language-name">
+                <i class="fas fa-c"></i>
+                <span>C</span>
+              </div>
               <span class="language-percent">80%</span>
             </div>
             <div class="proficiency-bar">
               <div class="proficiency-level" data-level="80"></div>
             </div>
           </div>
+          
           <div class="proficiency-item">
             <div class="language-info">
-              <span class="language-name">MySQL</span>
+              <div class="language-name">
+                <i class="fas fa-database"></i>
+                <span>MySQL</span>
+              </div>
               <span class="language-percent">70%</span>
             </div>
             <div class="proficiency-bar">
               <div class="proficiency-level" data-level="70"></div>
             </div>
           </div>
+          
           <div class="proficiency-item">
             <div class="language-info">
-              <span class="language-name">HTML5</span>
+              <div class="language-name">
+                <i class="fab fa-html5"></i>
+                <span>HTML5</span>
+              </div>
               <span class="language-percent">90%</span>
             </div>
             <div class="proficiency-bar">
               <div class="proficiency-level" data-level="90"></div>
             </div>
           </div>
+          
           <div class="proficiency-item">
             <div class="language-info">
-              <span class="language-name">CSS3</span>
+              <div class="language-name">
+                <i class="fab fa-css3-alt"></i>
+                <span>CSS3</span>
+              </div>
               <span class="language-percent">85%</span>
             </div>
             <div class="proficiency-bar">
               <div class="proficiency-level" data-level="85"></div>
             </div>
           </div>
+          
           <div class="proficiency-item">
             <div class="language-info">
-              <span class="language-name">JavaScript</span>
+              <div class="language-name">
+                <i class="fab fa-js"></i>
+                <span>JavaScript</span>
+              </div>
               <span class="language-percent">80%</span>
             </div>
             <div class="proficiency-bar">
               <div class="proficiency-level" data-level="80"></div>
             </div>
           </div>
+          
           <div class="proficiency-item">
             <div class="language-info">
-              <span class="language-name">PHP</span>
+              <div class="language-name">
+                <i class="fab fa-php"></i>
+                <span>PHP</span>
+              </div>
               <span class="language-percent">65%</span>
             </div>
             <div class="proficiency-bar">
               <div class="proficiency-level" data-level="65"></div>
             </div>
           </div>
+          
           <div class="proficiency-item">
             <div class="language-info">
-              <span class="language-name">Bash</span>
+              <div class="language-name">
+                <i class="fas fa-terminal"></i>
+                <span>Bash</span>
+              </div>
               <span class="language-percent">60%</span>
             </div>
             <div class="proficiency-bar">
@@ -193,145 +433,244 @@
           </div>
         </div>
       </div>
-
-      <!-- Other Skills -->
-      <div class="skills-grid">
-        <div class="skill-card">
-          <div class="skill-icon">
+      
+      <!-- Skills Categories -->
+      <div class="skills-categories">
+        <div class="category-card">
+          <div class="category-icon">
             <i class="fas fa-brain"></i>
           </div>
-          <h3>Machine Learning</h3>
-          <p>Python · NumPy · Pandas · Scikit-learn · TensorFlow · OpenCV · Data Analysis · Computer Vision · Neural Networks</p>
-        </div>
-        <div class="skill-card">
-          <div class="skill-icon">
-            <i class="fas fa-tools"></i>
+          <h3>Machine Learning & AI</h3>
+          <div class="skills-list">
+            <span>TensorFlow</span>
+            <span>PyTorch</span>
+            <span>Keras</span>
+            <span>Scikit-learn</span>
+            <span>OpenCV</span>
+            <span>Computer Vision</span>
+            <span>Neural Networks</span>
+            <span>Data Analysis</span>
           </div>
-          <h3>Tools & Technology</h3>
-          <p>Git/GitHub · VS Code · Jupyter Notebook · Kaggle · Google Colab · LaTeX · Canva· Chrome DevTools</p>
         </div>
-         <div class="skill-card">
-          <div class="skill-icon">
+        
+        <div class="category-card">
+          <div class="category-icon">
             <i class="fas fa-laptop-code"></i>
           </div>
-          <h3>Frontend Development</h3>
-          <p>HTML5 · CSS3 · JavaScript ES6+ · React(Basic) · Bootstrap · Tailwind CSS</p>
+          <h3>Web Development</h3>
+          <div class="skills-list">
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+            <span>React</span>
+            <span>Angular</span>
+            <span>Tailwind CSS</span>
+            <span>Responsive Design</span>
+          </div>
         </div>
-        <div class="skill-card">
-          <div class="skill-icon">
+        
+        <div class="category-card">
+          <div class="category-icon">
+            <i class="fas fa-tools"></i>
+          </div>
+          <h3>Tools & Technologies</h3>
+          <div class="skills-list">
+            <span>Git/GitHub</span>
+            <span>VS Code</span>
+            <span>Jupyter</span>
+            <span>Google Colab</span>
+            <span>Kaggle</span>
+            <span>Roboflow</span>
+            <span>Streamlit</span>
+            <span>Docker</span>
+          </div>
+        </div>
+        
+        <div class="category-card">
+          <div class="category-icon">
             <i class="fas fa-project-diagram"></i>
           </div>
           <h3>Project Management</h3>
-          <p>Agile Methodology · Scrum · Kanban · Jira · Trello · SDLC · Requirement Analysis · Documentation · Team Collaboration</p>
+          <div class="skills-list">
+            <span>Agile Methodology</span>
+            <span>Scrum</span>
+            <span>Kanban</span>
+            <span>Jira</span>
+            <span>Trello</span>
+            <span>SDLC</span>
+            <span>Documentation</span>
+            <span>Team Collaboration</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Projects -->
+  <!-- Projects Section -->
   <section id="projects" class="section reveal">
     <div class="container">
-      <h2 class="section-title">Recent Projects</h2>
-      
-      <!-- Project Carousel -->
-      <div class="project-carousel">
-        <div class="carousel-container">
-          <div class="carousel-track">
-            <!-- Project 1 -->
-            <div class="carousel-slide active">
-              <div class="carousel-content">
-                <div class="carousel-image">
-                  <img src="assets/Tour_Expense_Manager.png" alt="Tour Expense Manager">
-                </div>
-                <div class="carousel-text">
-                  <a href="https://maksudrakib44.github.io/Tour-Expense-Manager/"> <h3>Tour Expense Manager</h3></a>
-                  <p>Web-based personal project using HTML5, CSS3, JavaScript to help users track and manage tour expenses effectively.</p>
-                  <div class="tech-stack">
-                    <span>HTML5</span>
-                    <span>CSS3</span>
-                    <span>JavaScript</span>
-                    <span>Local Storage</span>
-                  </div>
-                  <div class="project-links">
-                    <a href="https://github.com/maksudrakib44/Tour-Expense-Manager" target="_blank" class="btn">GitHub Repo</a>
-                    <a href="https://maksudrakib44.github.io/Tour-Expense-Manager/" target="_blank" class="btn outline">Live Demo</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Project 2 -->
-            <div class="carousel-slide">
-              <div class="carousel-content">
-                <div class="carousel-image">
-                  <img src="assets/MHShop_2.png" alt="MH Shop">
-                </div>
-                <div class="carousel-text">
-                  <h3>MH Shop</h3>
-                  <p>E-Commerce platform (Frontend) built with pure HTML, CSS, and JavaScript featuring product listings, cart functionality, and responsive design.</p>
-                  <div class="tech-stack">
-                    <span>HTML5</span>
-                    <span>CSS3</span>
-                    <span>JavaScript</span>
-                    <span>Responsive Design</span>
-                    <span>Bootstrap</span>
-                  </div>
-                  <div class="project-links">
-                    <a href="https://github.com/maksudrakib44/MH-e-commerce" target="_blank" class="btn">GitHub Repo</a>
-                    <a href="https://mh-e-commerce.vercel.app" target="_blank" class="btn outline">Live Demo</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Project 3 -->
-            <div class="carousel-slide">
-              <div class="carousel-content">
-                <div class="carousel-image">
-                  <img src="assets/TechDash.png" alt="Technology Adoption Dashboard">
-                </div>
-                <div class="carousel-text">
-                  <h3>Technology Adoption Dashboard</h3>
-                  <p>Interactive web application that visualizes the digital transformation journey from 1995 to 2024 using Chart.js for data visualization.</p>
-                  <div class="tech-stack">
-                    <span>HTML5</span>
-                    <span>CSS3</span>
-                    <span>JavaScript</span>
-                    <span>Chart.js</span>
-                    <span>Data Visualization</span>
-                  </div>
-                  <div class="project-links">
-                    <a href="https://github.com/maksudrakib44/Digital-Revolution-a-data-story" target="_blank" class="btn">GitHub Repo</a>
-                    <a href="https://maksudrakib44.github.io/Digital-Revolution-a-data-story/" target="_blank" class="btn outline">Live Demo</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="carousel-nav">
-            <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
-            <div class="carousel-dots">
-              <span class="dot active"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
-            </div>
-            <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
-          </div>
-        </div>
+      <div class="section-header">
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">My Recent Work</p>
+        <div class="section-line"></div>
       </div>
       
-      <!-- All Projects Grid -->
-      <h3 class="sub-section-title">Featured Projects</h3>
+      <!-- Project Filter -->
+      <div class="project-filter">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="ml">Machine Learning</button>
+        <button class="filter-btn" data-filter="web">Web Development</button>
+        <button class="filter-btn" data-filter="ai">AI/Computer Vision</button>
+        <button class="filter-btn" data-filter="other">Others</button>
+      </div>
+      
+      <!-- Projects Grid -->
       <div class="projects-grid">
-        <!-- Tour Expense Manager -->
-        <div class="project-card">
+        <!-- Egg Quality Inspector -->
+        <div class="project-card" data-category="ml ai">
           <div class="project-image">
-            <img src="assets/Tour_Expense_Manager2.png" alt="Tour Expense Manager">
+            <img src="assets/Dashboard02.png" alt="Egg Quality Inspector">
+            <div class="project-overlay">
+              <a href="https://eggdetect.streamlit.app/" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
           </div>
           <div class="project-content">
+            <div class="project-tags">
+              <span class="tag tag-ml">ML</span>
+              <span class="tag tag-ai">AI</span>
+            </div>
+            <h3>Egg Quality Inspector</h3>
+            <p>Real-time cracked egg detection system using YOLOv8 for quality inspection with 94% precision.</p>
+            <div class="project-tech">
+              <span>Python</span>
+              <span>YOLOv8</span>
+              <span>Streamlit</span>
+              <span>OpenCV</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/maksudrakib44/cracked-egg-detection" target="_blank">
+                <i class="fab fa-github"></i> Code
+              </a>
+              <a href="https://eggdetect.streamlit.app/" target="_blank">
+                <i class="fas fa-external-link-alt"></i> Live
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Brain Tumor Detection -->
+        <div class="project-card" data-category="ml ai">
+          <div class="project-image">
+            <img src="assets/brain_tumor_detect.png" alt="Brain Tumor Detection">
+            <div class="project-overlay">
+              <a href="#" class="project-link">
+                <i class="fas fa-eye"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag tag-ml">ML</span>
+              <span class="tag tag-ai">AI</span>
+            </div>
+            <h3>Brain Tumor Detection</h3>
+            <p>CNN-based system for detecting and classifying brain tumors from MRI scans using deep learning.</p>
+            <div class="project-tech">
+              <span>PyTorch</span>
+              <span>TensorFlow</span>
+              <span>OpenCV</span>
+            </div>
+            <div class="project-links">
+              <a href="#" target="_blank">
+                <i class="fab fa-github"></i> Code
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- MH Shop -->
+        <div class="project-card" data-category="web">
+          <div class="project-image">
+            <img src="assets/MHShop.png" alt="MH Shop">
+            <div class="project-overlay">
+              <a href="https://mh-e-commerce.vercel.app" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag tag-web">Web</span>
+            </div>
+            <h3>MH Shop - E-commerce</h3>
+            <p>Full-featured e-commerce platform with product listings, cart functionality, and responsive design.</p>
+            <div class="project-tech">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/maksudrakib44/MH-e-commerce" target="_blank">
+                <i class="fab fa-github"></i> Code
+              </a>
+              <a href="https://mh-e-commerce.vercel.app" target="_blank">
+                <i class="fas fa-external-link-alt"></i> Live
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Technology Adoption Dashboard -->
+        <div class="project-card" data-category="web">
+          <div class="project-image">
+            <img src="assets/TechDash2.png" alt="Technology Adoption Dashboard">
+            <div class="project-overlay">
+              <a href="https://maksudrakib44.github.io/Digital-Revolution-a-data-story/" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag tag-web">Web</span>
+            </div>
+            <h3>Tech Adoption Dashboard</h3>
+            <p>Interactive dashboard visualizing digital transformation journey from 1995-2024 with Chart.js.</p>
+            <div class="project-tech">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JavaScript</span>
+              <span>Chart.js</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/maksudrakib44/Digital-Revolution-a-data-story" target="_blank">
+                <i class="fab fa-github"></i> Code
+              </a>
+              <a href="https://maksudrakib44.github.io/Digital-Revolution-a-data-story/" target="_blank">
+                <i class="fas fa-external-link-alt"></i> Live
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Tour Expense Manager -->
+        <div class="project-card" data-category="web">
+          <div class="project-image">
+            <img src="assets/Tour_Expense_Manager2.png" alt="Tour Expense Manager">
+            <div class="project-overlay">
+              <a href="https://maksudrakib44.github.io/Tour-Expense-Manager/" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag tag-web">Web</span>
+            </div>
             <h3>Tour Expense Manager</h3>
-            <p>Web based personal project using HTML5, CSS3, JavaScript with local storage for data persistence.</p>
+            <p>Web-based expense tracking system for travel groups with local storage and responsive design.</p>
             <div class="project-tech">
               <span>HTML5</span>
               <span>CSS3</span>
@@ -339,64 +678,32 @@
               <span>Local Storage</span>
             </div>
             <div class="project-links">
-              <a href="https://github.com/maksudrakib44/Tour-Expense-Manager" target="_blank">GitHub</a>
-              <a href="https://maksudrakib44.github.io/Tour-Expense-Manager/" target="_blank">Live Demo</a>
+              <a href="https://github.com/maksudrakib44/Tour-Expense-Manager" target="_blank">
+                <i class="fab fa-github"></i> Code
+              </a>
+              <a href="https://maksudrakib44.github.io/Tour-Expense-Manager/" target="_blank">
+                <i class="fas fa-external-link-alt"></i> Live
+              </a>
             </div>
           </div>
         </div>
-
-        <!-- MH Shop -->
-        <div class="project-card">
+        
+        <!-- FocusFlow Pomodoro -->
+        <div class="project-card" data-category="web">
           <div class="project-image">
-            <img src="assets/MHShop.png" alt="MH Shop">
+            <img src="assets/Focus_Flow.png" alt="FocusFlow Pomodoro Timer">
+            <div class="project-overlay">
+              <a href="https://maksudrakib44.github.io/FocusFlow-Pomodoro-Timer-Productivity-Hub/" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
           </div>
           <div class="project-content">
-            <h3>MH Shop</h3>
-            <p>E-Commerce platform (Frontend) built with pure HTML, CSS, and JavaScript with Bootstrap for responsive design.</p>
-            <div class="project-tech">
-              <span>HTML5</span>
-              <span>CSS3</span>
-              <span>JavaScript</span>
-              <span>Bootstrap</span>
-              <span>Responsive Design</span>
+            <div class="project-tags">
+              <span class="tag tag-web">Web</span>
             </div>
-            <div class="project-links">
-              <a href="https://github.com/maksudrakib44/MH-e-commerce" target="_blank">GitHub</a>
-              <a href="https://mh-e-commerce.vercel.app" target="_blank">Live Demo</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Technology Adoption Dashboard -->
-        <div class="project-card">
-          <div class="project-image">
-            <img src="assets/TechDash2.png" alt="Technology Adoption Dashboard">
-          </div>
-          <div class="project-content">
-            <h3>Technology Adoption Dashboard</h3>
-            <p>Interactive web application using HTML5, CSS3, JavaScript ES6+, Chart.js for data visualization.</p>
-            <div class="project-tech">
-              <span>HTML5</span>
-              <span>CSS3</span>
-              <span>JavaScript</span>
-              <span>Chart.js</span>
-              <span>Data Visualization</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/maksudrakib44/Digital-Revolution-a-data-story" target="_blank">GitHub</a>
-              <a href="https://maksudrakib44.github.io/Digital-Revolution-a-data-story/" target="_blank">Live Demo</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- FocusFlow -->
-        <div class="project-card">
-          <div class="project-image">
-            <img src="assets/Focus_Flow.png" alt="FocusFlow">
-          </div>
-          <div class="project-content">
-            <h3>Interactive Pomodoro Timer & Focus Hub</h3>
-            <p>Pomodoro timer with task management, motivational quotes, and ambient sounds using modern JavaScript.</p>
+            <h3>FocusFlow Pomodoro Timer</h3>
+            <p>Productivity hub with Pomodoro timer, task management, and ambient sounds using modern JavaScript.</p>
             <div class="project-tech">
               <span>HTML5</span>
               <span>CSS3</span>
@@ -404,20 +711,32 @@
               <span>Web Audio API</span>
             </div>
             <div class="project-links">
-              <a href="https://github.com/maksudrakib44/FocusFlow-Pomodoro-Timer-Productivity-Hub" target="_blank">GitHub</a>
-              <a href="https://maksudrakib44.github.io/FocusFlow-Pomodoro-Timer-Productivity-Hub/" target="_blank">Live Demo</a>
+              <a href="https://github.com/maksudrakib44/FocusFlow-Pomodoro-Timer-Productivity-Hub" target="_blank">
+                <i class="fab fa-github"></i> Code
+              </a>
+              <a href="https://maksudrakib44.github.io/FocusFlow-Pomodoro-Timer-Productivity-Hub/" target="_blank">
+                <i class="fas fa-external-link-alt"></i> Live
+              </a>
             </div>
           </div>
         </div>
-
-        <!-- Chat App -->
-        <div class="project-card">
+        
+        <!-- Chat Application -->
+        <div class="project-card" data-category="other">
           <div class="project-image">
-            <img src="assets/chat_app.png" alt="Chat App">
+            <img src="assets/chat_app.png" alt="Chat Application">
+            <div class="project-overlay">
+              <a href="#" class="project-link">
+                <i class="fas fa-eye"></i>
+              </a>
+            </div>
           </div>
           <div class="project-content">
-            <h3>Chat App</h3>
-            <p>Java sockets + Swing UI for group/1:1 messaging with real-time communication features.</p>
+            <div class="project-tags">
+              <span class="tag tag-other">Networking</span>
+            </div>
+            <h3>Real-time Chat App</h3>
+            <p>Java-based chat application with socket programming for real-time group and private messaging.</p>
             <div class="project-tech">
               <span>Java</span>
               <span>Swing</span>
@@ -425,103 +744,172 @@
               <span>Multithreading</span>
             </div>
             <div class="project-links">
-              <a href="https://github.com/maksudrakib44/Chat-App-in-java-and-socket-programming" target="_blank">GitHub</a>
+              <a href="https://github.com/maksudrakib44/Chat-App-in-java-and-socket-programming" target="_blank">
+                <i class="fab fa-github"></i> Code
+              </a>
             </div>
           </div>
         </div>
-
+        
         <!-- Campus Navigation -->
-        <div class="project-card">
+        <div class="project-card" data-category="other">
           <div class="project-image">
             <img src="assets/campus_navigation.png" alt="Campus Navigation System">
+            <div class="project-overlay">
+              <a href="#" class="project-link">
+                <i class="fas fa-eye"></i>
+              </a>
+            </div>
           </div>
           <div class="project-content">
+            <div class="project-tags">
+              <span class="tag tag-other">AI</span>
+            </div>
             <h3>Campus Navigation System</h3>
-            <p>Shortest pathfinding using BFS/DFS/Dijkstra algorithms with Python implementation.</p>
+            <p>Shortest pathfinding application using Dijkstra's algorithm for campus navigation.</p>
             <div class="project-tech">
               <span>Python</span>
-              <span>Algorithms</span>
+              <span>Dijkstra Algorithm</span>
+              <span>Tkinter</span>
               <span>Graph Theory</span>
-              <span>Data Structures</span>
             </div>
             <div class="project-links">
-              <a href="https://github.com/maksudrakib44/Campus_Navigation_System" target="_blank">GitHub</a>
+              <a href="https://github.com/maksudrakib44/Campus_Navigation_System" target="_blank">
+                <i class="fab fa-github"></i> Code
+              </a>
             </div>
           </div>
         </div>
-
-        <!-- Blood Donation -->
-        <div class="project-card">
+        <!-- Campus Navigation -->
+        <div class="project-card" data-category="other">
           <div class="project-image">
-            <img src="assets/Blood_management.png" alt="Blood Management System">
+            <img src="assets/Blood_management.png" alt="Campus Navigation System">
+            <div class="project-overlay">
+              <a href="#" class="project-link">
+                <i class="fas fa-eye"></i>
+              </a>
+            </div>
           </div>
           <div class="project-content">
+            <div class="project-tags">
+              <span class="tag tag-other">IDP</span>
+            </div>
             <h3>Blood Management System</h3>
-            <p>Web-based Blood Management System with donor registration, hospital requests, inventory management, and record handling.</p>
+            <p>Web-based Blood Management System with donor registration, hospital requests, inventory management, and record handling. Using concept of software development life cycle and tools.</p>
             <div class="project-tech">
               <span>PHP</span>
               <span>MySQL</span>
               <span>HTML/CSS/JS</span>
-              <span>Database Design</span>
               <span>SDLC</span>
+              <span>Agile</span>
             </div>
             <div class="project-links">
-              <a href="https://github.com/maksudrakib44/Blood-Management-System-master" target="_blank">GitHub</a>
+              <a href="https://github.com/maksudrakib44/Blood-Management-System-master" target="_blank">
+                <i class="fab fa-github"></i> Code
+              </a>
             </div>
           </div>
         </div>
+      </div>
+      
+      <div class="view-all">
+        <a href="https://github.com/maksudrakib44" target="_blank" class="btn btn-outline">
+          <i class="fab fa-github"></i>
+          <span>View All Projects on GitHub</span>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
+  <!-- Contact Section -->
   <section id="contact" class="section reveal">
-    <div class="container contact-container">
-      <div class="contact-text">
+    <div class="container">
+      <div class="section-header">
         <h2 class="section-title">Get In Touch</h2>
-        <p>I am open to opportunities in machine learning, frontend web development, and project management. Currently doing research on computer vision
-          and always eager to explore new opportunities. If you're interested in collaborating or have any questions, feel free to reach out!.</p>
-        <div class="contact-buttons">
-          <a href="mailto:maksudrakib44@gmail.com" class="btn contact-btn">
-            <i class="fas fa-envelope"></i>
-            Email
-          </a>
-          <a href="https://www.linkedin.com/in/md-maksudul-haque-025bb0284/" target="_blank" class="btn outline contact-btn">
-            <i class="fab fa-linkedin"></i>
-            LinkedIn
-          </a>
-          <a href="https://github.com/maksudrakib44" target="_blank" class="btn outline contact-btn">
-            <i class="fab fa-github"></i>
-            GitHub
-          </a>
-          <a href="https://facebook.com/maksudulhaquerakib" target="_blank" class="btn outline contact-btn">
-            <i class="fab fa-facebook"></i>
-            Facebook
-          </a>
+        <p class="section-subtitle">Let's Work Together</p>
+        <div class="section-line"></div>
+      </div>
+      
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h3>Email</h3>
+            <p>maksudrakib44@gmail.com</p>
+            <a href="mailto:maksudrakib44@gmail.com" class="contact-link">Send Message</a>
+          </div>
+          
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3>Location</h3>
+            <p>Dhaka, Bangladesh</p>
+            <a href="#" class="contact-link">View on Map</a>
+          </div>
+          
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <h3>WhatsApp</h3>
+            <p>+880-1883745644</p>
+            <a href="tel:+8801883745644" class="contact-link">Connect Now</a>
+          </div>
+          
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h3>Availability</h3>
+            <p>Open to Opportunities</p>
+            <a href="#contact-form" class="contact-link">Schedule Meeting</a>
+          </div>
+        </div>
+        
+        <div class="contact-form">
+          <form id="contact-form">
+            <div class="form-group">
+              <input type="text" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <input type="text" placeholder="Subject" required>
+            </div>
+            <div class="form-group">
+              <textarea placeholder="Your Message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              <i class="fas fa-paper-plane"></i>
+              <span>Send Message</span>
+            </button>
+          </form>
         </div>
       </div>
-      <div class="contact-info">
-        <h3>Quick Info</h3>
-        <div class="info-item">
-          <i class="fas fa-map-marker-alt"></i>
-          <div>
-            <strong>Location:</strong>
-            <p>Dhaka, Bangladesh</p>
-          </div>
-        </div>
-        <div class="info-item">
-          <i class="fas fa-briefcase"></i>
-          <div>
-            <strong>Focus:</strong>
-            <p>Frontend Web Dev, Project Management, Machine Learning</p>
-          </div>
-        </div>
-        <div class="info-item">
-          <i class="fas fa-user-clock"></i>
-          <div>
-            <strong>Availability:</strong>
-            <p>Job / Research</p>
-          </div>
+      
+      <div class="social-contact">
+        <h3>Connect with me</h3>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/md-maksudul-haque-025bb0284/" target="_blank" class="social-icon">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://github.com/maksudrakib44" target="_blank" class="social-icon">
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+          <a href="https://facebook.com/maksudulhaquerakib" target="_blank" class="social-icon">
+            <i class="fab fa-facebook"></i>
+            <span>Facebook</span>
+          </a>
+          <a href="mailto:maksudrakib44@gmail.com" class="social-icon">
+            <i class="fas fa-envelope"></i>
+            <span>Email</span>
+          </a>
         </div>
       </div>
     </div>
@@ -529,26 +917,47 @@
 
   <!-- Footer -->
   <footer>
-    <div class="container footer-container">
-      <p>© 2025 Md. Maksudul Haque</p>
-      <div class="footer-links">
-        <a href="https://github.com/maksudrakib44" target="_blank">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/md-maksudul-haque-025bb0284/" target="_blank">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="mailto:maksudrakib44@gmail.com">
-          <i class="fas fa-envelope"></i>
-        </a>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h2>MH<span></span></h2>
+          <p>Building the future with code, research and creativity</p>
+        </div>        
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h3>Contact Info</h3>
+          <p><i class="fas fa-envelope"></i> maksudrakib44@gmail.com</p>
+          <p><i class="fas fa-phone"></i> +880-1883745644</p>
+          <p><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Md. Maksudul Haque. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="https://github.com/maksudrakib44" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/md-maksudul-haque-025bb0284/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:maksudrakib44@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
       </div>
     </div>
   </footer>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="back-to-top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 </html>
-
-
-
-
-
-
