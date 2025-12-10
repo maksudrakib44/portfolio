@@ -22,6 +22,7 @@
       <nav>
         <ul class="nav-links">
           <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#education" class="nav-link">Education</a></li>
           <li><a href="#skills" class="nav-link">Skills</a></li>
           <li><a href="#projects" class="nav-link">Projects</a></li>
@@ -45,7 +46,7 @@
     </div>
   </header>
 
-  <!-- Hero Section with Slideshow -->
+  <!-- Hero Section -->
   <section id="home" class="hero">
     <!-- Animated Background Elements -->
     <div class="hero-bg-elements">
@@ -93,17 +94,6 @@
           and Frontend Development. Building intelligent solutions through research.
         </p>
         
-        <div class="hero-stats">
-          <div class="stat">
-            <h3>10+</h3>
-            <p>Projects</p>
-          </div>
-          <div class="stat">
-            <h3>8+</h3>
-            <p>Technologies</p>
-          </div>
-        </div>
-        
         <div class="hero-buttons">
           <a href="#projects" class="btn btn-primary">
             <i class="fas fa-rocket"></i>
@@ -125,27 +115,26 @@
           <a href="mailto:maksudrakib44@gmail.com" class="social-link">
             <i class="fas fa-envelope"></i>
           </a>
-          <a href="https://facebook.com/maksudulhaquerakib" target="_blank" class="social-link">
-            <i class="fab fa-facebook"></i>
-          </a>
         </div>
       </div>
       
       <div class="hero-image">
         <div class="image-container">
-          <div class="image-wrapper">
-            <img src="assets/avater_photo.png" alt="Md. Maksudul Haque">
-            <div class="image-frame"></div>
-            <div class="image-dots">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
+          <!-- Circular Photo Frame -->
+          <div class="circular-frame">
+            <div class="circular-image">
+              <img src="assets/avater_photo.png" alt="Md. Maksudul Haque">
+              <div class="image-glow"></div>
+            </div>
+            <div class="photo-badge">
+              <i class="fas fa-user"></i>
             </div>
           </div>
+          
+          <!-- Floating Tech Cards -->
           <div class="floating-card card-1">
             <i class="fas fa-code"></i>
-            <span>Frontend Web</span>
+            <span>Web Dev</span>
           </div>
           <div class="floating-card card-2">
             <i class="fas fa-brain"></i>
@@ -179,13 +168,19 @@
       
       <div class="about-content">
         <div class="about-image">
-          <div class="image-wrapper">
-            <img src="assets/maksud_photos.jpg" alt="Md. Maksudul Haque">
-            <div class="image-glow"></div>
-          </div>
-          <div class="about-badge">
-            <i class="fas fa-award"></i>
-            <span>Final Year Student</span>
+          <div class="about-photo-frame">
+            <div class="photo-container">
+              <img src="assets/maksud_photos.jpg" alt="Md. Maksudul Haque">
+              <div class="photo-frame-border"></div>
+              <div class="photo-corner corner-tl"></div>
+              <div class="photo-corner corner-tr"></div>
+              <div class="photo-corner corner-bl"></div>
+              <div class="photo-corner corner-br"></div>
+            </div>
+            <div class="about-badge">
+              <i class="fas fa-award"></i>
+              <span>Final Year Student</span>
+            </div>
           </div>
         </div>
         
@@ -583,7 +578,7 @@
               <span>OpenCV</span>
             </div>
             <div class="project-links">
-              <a href="#" target="_blank">
+              <a href="https://github.com/maksudrakib44/brain-tumor-detection" target="_blank">
                 <i class="fab fa-github"></i> Code
               </a>
             </div>
@@ -780,10 +775,10 @@
             </div>
           </div>
         </div>
-        <!-- Campus Navigation -->
+        <!-- Blood Management System -->
         <div class="project-card" data-category="other">
           <div class="project-image">
-            <img src="assets/Blood_management.png" alt="Campus Navigation System">
+            <img src="assets/Blood_management.png" alt="Blood Management System">
             <div class="project-overlay">
               <a href="#" class="project-link">
                 <i class="fas fa-eye"></i>
@@ -902,10 +897,6 @@
             <i class="fab fa-github"></i>
             <span>GitHub</span>
           </a>
-          <a href="https://facebook.com/maksudulhaquerakib" target="_blank" class="social-icon">
-            <i class="fab fa-facebook"></i>
-            <span>Facebook</span>
-          </a>
           <a href="mailto:maksudrakib44@gmail.com" class="social-icon">
             <i class="fas fa-envelope"></i>
             <span>Email</span>
@@ -928,6 +919,7 @@
           <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
